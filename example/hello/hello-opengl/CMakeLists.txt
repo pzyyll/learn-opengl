@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("hello-cmake")
+project ("hello-opengl")
 
 SET(ROOT_DIR ${CMAKE_SOURCE_DIR})
 SET(LIB_DIR ${ROOT_DIR}/../../../lib)
@@ -20,7 +20,7 @@ aux_source_directory(${ROOT_DIR} ROOT_SRC)
 message("${ROOT_SRC}")
 message("${GLABSRC}")
 
-add_executable(hello-cmake ${ROOT_SRC} ${GLABSRC})
+add_executable(hello-opengl ${ROOT_SRC} ${GLABSRC})
 
 include_directories(${LIB_DIR}/glfw-3.3.4/include ${LIB_DIR}/glad/include)
 
@@ -29,6 +29,6 @@ find_library(GLFW glfw3 ${LIB_DIR}/glfw-3.3.4)
 message(${GLFW})
 
 # link_libraries(${GLFW})
-target_link_libraries(hello-cmake ${GLFW})
+target_link_libraries(hello-opengl ${GLFW})
 
 # TODO: 如有需要，请添加测试并安装目标。

@@ -6,3 +6,7 @@
 #include <iostream>
 
 // TODO: 在此处引用程序需要的其他标头。
+int draw_rect();
+int hello_triangle();
+int hello_vbo();
+int hello_exp2();

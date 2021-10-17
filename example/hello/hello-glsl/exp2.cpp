@@ -48,8 +48,7 @@ int exp2()
             xstep = -xstep;
         }
 
-
-        shader.SetFloat("xoffset", xoffset);
+        // shader.SetFloat("xoffset", xoffset);
         glBindVertexArray(vao);
         glDrawArrays(GL_TRIANGLES, 0, 3);
     };

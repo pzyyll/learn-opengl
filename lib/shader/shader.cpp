@@ -101,3 +101,13 @@ void Shader::SetFloat(const std::string& name, float value) const
 {
     glUniform1f(glGetUniformLocation(_ID, name.c_str()), value);
 }
+
+void Shader::SetMatrix4fv(const std::string& name, GLsizei count, GLboolean transpose, const GLfloat* value) const
+{
+    glUniformMatrix4fv(glGetUniformLocation(_ID, name.c_str()), count, transpose, value);
+}
+
+unsigned int Shader::GetUniformLocation(const std::string& name) const
+{
+    return glGetUniformLocation(_ID, name.c_str());
+}

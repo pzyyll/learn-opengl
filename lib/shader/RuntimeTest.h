@@ -12,6 +12,8 @@ class RuntimeTest
 public:
     RuntimeTest();
     int Run(const std::function<void()>& cb);
+
+    GLFWwindow* getWindow() { return window; }
 private:
     GLFWwindow* window;
 };
